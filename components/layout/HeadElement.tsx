@@ -5,7 +5,7 @@ function HeadElement({
 	pageTitle = 'Brand',
 	description = 'Brand description',
 	noIndex = false,
-	siteLink = 'https://branded-website-template-site.vercel.app/',
+	siteLink = 'https://branded-website-template-site.vercel.app',
 }: {
 	pageTitle?: string;
 	description?: string;
