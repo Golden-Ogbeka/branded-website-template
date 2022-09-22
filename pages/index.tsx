@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
+import AppLayout from '../components/layout/AppLayout';
+import Hero from '../components/pages/Home/Hero';
 
 const Home: NextPage = () => {
 	return (
-		<div className='w-screen  h-screen  flex justify-center items-center'>
-			<h1 className='text-xl'>Start building your branded website</h1>
-		</div>
+		<AppLayout>
+			<Hero />
+		</AppLayout>
 	);
 };
 
