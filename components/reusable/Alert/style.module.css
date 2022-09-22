@@ -1,0 +1,36 @@
+.container {
+	position: fixed;
+	top: 100px;
+	right: 20px;
+	background-color: red;
+	z-index: 50;
+	min-width: 200px;
+	max-width: 80vw;
+	padding-block: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 5px;
+	padding-inline: 20px;
+	justify-content: space-between;
+	font-size: 0.9rem;
+	color: #fff;
+	font-weight: 600;
+	gap: 20px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.closeButton {
+	font-size: 25px;
+}
+.closeButton:hover {
+	color: #000;
+	cursor: pointer;
+}

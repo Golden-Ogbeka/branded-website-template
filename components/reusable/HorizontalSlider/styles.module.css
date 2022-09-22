@@ -1,0 +1,22 @@
+.container {
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 55px;
+	align-items: center;
+	overflow-x: auto;
+	overflow-y: hidden;
+	flex-wrap: nowrap;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	cursor: grab;
+	cursor: -webkit-grab;
+	/* padding-block: 20px; */
+	padding-top: 28.53px;
+	padding-bottom: 23.18px;
+	position: relative;
+	scroll-behavior: smooth;
+}
+.container::-webkit-scrollbar {
+	display: none;
+}
