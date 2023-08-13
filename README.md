@@ -24,4 +24,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Live URL
 
-[Next.js Documentation](https://nextjs.org/docs)
+[Hosted on Vercel](https://branded-website-template-site.vercel.app/)
