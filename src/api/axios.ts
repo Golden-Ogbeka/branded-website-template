@@ -1,10 +1,11 @@
+import { getTokenDetails } from './../functions/userSession';
 import { API_URL } from '@/functions/environmentVariables';
-import { getSessionDetails } from '@/functions/userSession';
+// import { getSessionDetails } from '@/functions/userSession';
 import { store } from '@/store';
 import { signOut } from '@/store/features/user';
 import axios from 'axios';
 
-const sessionDetails = getSessionDetails();
+const sessionToken = getTokenDetails();
 
 export const appAxios = axios.create({
   headers: {
@@ -16,10 +17,10 @@ export const appAxios = axios.create({
 appAxios.interceptors.request.use(
   (config) => {
     const appState = store.getState();
-    const storeUserDetails = appState?.user?.user;
+    const storeToken = appState?.user.token;
     // get state is called here to be current at the time of rendering
 
-    const token = storeUserDetails?.token || sessionDetails?.token;
+    const token = storeToken || sessionToken;
 
     if (token) {
       config.headers.Authorization = 'Bearer ' + token;
@@ -46,7 +47,7 @@ appAxios.interceptors.response.use(
     ) {
       if (
         err.response.status === 401 &&
-        sessionDetails // logout only when a user has session
+        sessionToken // logout only when a user has session
       ) {
         // Log user out
         store.dispatch(signOut());
